@@ -1,0 +1,32 @@
+$date
+	Fri Aug 11 15:25:21 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module memory_tb $end
+$var wire 1 ! out_wire $end
+$var reg 1 " in_reg $end
+$scope module m $end
+$var wire 1 " clk $end
+$var wire 1 ! slow_clk $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+0!
+$end
+#5
+1!
+1"
+#10
+0!
+0"
+#15
+1!
+1"
