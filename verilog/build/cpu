@@ -1,0 +1,44 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000023560fe9b30 .scope module, "memory_tb" "memory_tb" 2 1;
+ .timescale 0 0;
+v0000023560f04750_0 .var "in_reg", 0 0;
+v0000023560f047f0_0 .net "out_wire", 0 0, L_0000023560fe7050;  1 drivers
+S_0000023560f04520 .scope module, "m" "memory" 2 4, 3 1 0, S_0000023560fe9b30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /OUTPUT 1 "slow_clk";
+L_0000023560fe7050 .functor BUFZ 1, v0000023560f04750_0, C4<0>, C4<0>, C4<0>;
+v0000023560f046b0_0 .net "clk", 0 0, v0000023560f04750_0;  1 drivers
+v0000023560fe6da0_0 .net "slow_clk", 0 0, L_0000023560fe7050;  alias, 1 drivers
+    .scope S_0000023560fe9b30;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "build/memory_tb.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000023560fe9b30 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000023560f04750_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000023560f04750_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000023560f04750_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000023560f04750_0, 0, 1;
+    %vpi_call 2 19 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    ".\test\memory_tb.v";
+    ".\src\memory.v";
