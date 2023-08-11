@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "elf.h": "c",
+        "stddef.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled",
+    "command-runner.terminal.name": "test1",
+    "command-runner.terminal.autoClear": true,
+    "command-runner.terminal.autoFocus": true,
+    "command-runner.commands": {
+        "test1": "${workspaceFolder}/run.sh test1"
+    }
+}
